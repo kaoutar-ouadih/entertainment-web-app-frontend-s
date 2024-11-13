@@ -18,7 +18,7 @@ const Recommended: React.FC<RecommendedProps> = ({copyOfData, bookmarkedItems, s
  
   
   function addMovieToUser(userId: number, movieId: number){
-     axios.post(`http://localhost:8081/users/${userId}/movies/${movieId}`, {},
+     axios.post(`https://entertainment-web-app-spring-security.onrender.com/users/${userId}/movies/${movieId}`, {},
       {headers: {
         'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
       }})
@@ -39,7 +39,7 @@ const Recommended: React.FC<RecommendedProps> = ({copyOfData, bookmarkedItems, s
   }
 
   function removeMovieFromBookmarkedList(userId: number, movieId: number) {
-    axios.post(`http://localhost:8081/users/remove/${userId}/movies/${movieId}`, {},
+    axios.post(`https://entertainment-web-app-spring-security.onrender.com/users/remove/${userId}/movies/${movieId}`, {},
       {headers: {
         'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
       }})

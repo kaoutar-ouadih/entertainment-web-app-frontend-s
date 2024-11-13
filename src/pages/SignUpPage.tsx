@@ -17,7 +17,7 @@ const SignUpPage = () => {
 
     if(emailPattern.test(email) && password.length >= 8 && confirmPassword === password){
       // send data to the backend here after validation
-      axios.post("http://localhost:8081/users/register", {username: email, password})
+      axios.post("https://entertainment-web-app-spring-security.onrender.com/users/register", {username: email, password})
       .then(res=>{
         console.log(res.data);
       })

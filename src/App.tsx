@@ -25,7 +25,7 @@ function App() {
   const [bookmarkedItems, setBookmarkedItems] = useState<number[]>([]);
   
   useEffect(()=>{
-    axios.get("http://localhost:8081/movies/all",
+    axios.get("https://entertainment-web-app-spring-security.onrender.com/movies/all",
     )
       .then(result=> {
         setData(result.data);

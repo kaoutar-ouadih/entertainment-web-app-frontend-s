@@ -17,7 +17,7 @@ const TvSeries: React.FC<TvSeriesProps> = ({copyOfData, bookmarkedItems, setBook
  
   
   function addMovieToUser(userId: number, movieId: number){
-     axios.post(`http://localhost:8081/users/${userId}/movies/${movieId}`, {},
+     axios.post(`https://entertainment-web-app-spring-security.onrender.com/users/${userId}/movies/${movieId}`, {},
       {headers: {
         'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
       }})
@@ -38,7 +38,7 @@ const TvSeries: React.FC<TvSeriesProps> = ({copyOfData, bookmarkedItems, setBook
   }
 
   function removeMovieFromBookmarkedList(userId: number, movieId: number) {
-    axios.post(`http://localhost:8081/users/remove/${userId}/movies/${movieId}`, {},
+    axios.post(`https://entertainment-web-app-spring-security.onrender.com/users/remove/${userId}/movies/${movieId}`, {},
       {headers: {
         'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
       }})
