@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the eye icon in Microsoft Edge */
+input[type="password"]::-ms-reveal {
+    display: none;
+  }
+  
+  /* Hide the eye icon in Chrome, Safari, and other WebKit-based browsers */
+  input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+  }
