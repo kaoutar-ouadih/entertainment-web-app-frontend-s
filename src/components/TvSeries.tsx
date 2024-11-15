@@ -68,7 +68,7 @@ const TvSeries: React.FC<TvSeriesProps> = ({copyOfData, bookmarkedItems, setBook
         <h1 className="text-white text-3xl font-extralight mb-7">TV Series</h1>
       <div className="flex gap-7 flex-wrap justify-between">
         { copyOfData.map((item)=>(
-        <div key={item.title} className="min-w-[200px] basis-[210px]  lg:basis-[250px] mb-4">
+        <div key={item.title} className="w-full min-w-[200px] sm:basis-[220px] lg:basis-[250px] mb-4">
             <div className="w-full rounded-md overflow-hidden relative mb-2 group/outer" >
                 <img className="w-full" src={item.thumbnail_regular_large} alt="" />
                 {/* bookMark */}
