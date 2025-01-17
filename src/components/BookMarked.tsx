@@ -17,7 +17,7 @@ const BookMarked: React.FC<BookMarkedProps> = ({bookmarkedItems, setBookmarkedIt
     }, []);
 
     function removeMovieFromBookmarkedList(movieId: number, userId: number ) {
-        axios.post(`https://entertainment-web-app-spring-security.onrender.com/users/remove/${userId}/movies/${movieId}`, {},
+        axios.post(`http://147.93.58.141:8081/users/remove/${userId}/movies/${movieId}`, {},
           {headers: {
             'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
           }})

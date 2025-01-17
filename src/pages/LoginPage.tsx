@@ -22,7 +22,7 @@ const LoginPage = () => {
 
     if(emailPattern.test(email) && password.length >= 8){
       // send data to the backend here
-      axios.post("https://entertainment-web-app-spring-security.onrender.com/users/login", {username: email, password})
+      axios.post("http://147.93.58.141:8081/users/login", {username: email, password})
         .then(res=>{
           if(res.data === "username or password are invalid" && res.status ===200){
             setErrorMsg("Email or Password are invalid");
@@ -39,7 +39,7 @@ const LoginPage = () => {
   }
 
   function loadProfileInfos(){
-    axios.get("https://entertainment-web-app-spring-security.onrender.com/users/getMyProfile",
+    axios.get("http://147.93.58.141:8081/users/getMyProfile",
       {headers: {
         'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
       }}
@@ -56,7 +56,7 @@ const LoginPage = () => {
     const userId = localStorage.getItem("userId");
     console.log(userId);
     if(userId){
-      axios.get(`https://entertainment-web-app-spring-security.onrender.com/users/${+userId}/movies`,
+      axios.get(`http://147.93.58.141:8081/users/${+userId}/movies`,
         {
           headers:{
             'Authorization': `Bearer ${localStorage.getItem("jwtToken")}`
